@@ -1,0 +1,114 @@
+
+.App{
+  display: flex;
+}
+/* .htmal .body #root{
+  width: 100%;
+  height: 100%;
+} */
+.btn1{
+  background-color: rgb(103, 201, 94);
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-color:rgb(23, 99, 4) ;
+  color:purple;
+
+}.btn2{
+  background-color: rgb(103, 201, 94);
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-color:rgb(23, 99, 4) ;
+  color:purple;
+
+}.btn3{
+  background-color: rgb(103, 201, 94);
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-color: rgb(23, 99, 4);
+  color:purple;
+}.btn4{
+  background-color:rgb(103, 201, 94) ;
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-color:rgb(23, 99, 4) ;
+  color:purple;
+
+}.btn5{
+  background-color: rgb(103, 201, 94);
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-color: rgb(23, 99, 4);
+  color:purple;
+
+}.btn6{
+  background-color:rgb(103, 201, 94) ;
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-color: rgb(23,99,4);
+  color:purple;
+}
+.navbar{
+  background-color: rgb(20, 150, 70);
+  height: 80px;
+  border-radius: 10px;
+  margin-right: 10px;
+  border-color: rgb(15, 27, 15);
+}
+.texteditor{
+  display: flexbox;
+  text-align: center;
+}
+.main{
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+.textarea{
+  background-color: white;
+  padding: 5px;
+  border-radius: 15px;
+}
+.label{
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+h1{
+  font-size: 36px;
+}
+h2{
+  font-size: 32px;
+}
+h3{
+  font-size: 28px;
+}
+ h4{
+   font-size: 24px;
+ } 
+ h5{
+   font-size: 20px;
+ }
+h6{
+  font-size: 16px;
+}
+#markdown{
+  border-radius: 5px;
+
+}
