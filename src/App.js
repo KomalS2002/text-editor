@@ -5,7 +5,7 @@ import  {useState} from 'react';
 import { Remarkable } from 'remarkable';
 //import { hasSelectionSupport } from '@testing-library/user-event/dist/utils';
 //import TextForm from 'TextForm.js'
-const md= new Remarkable
+const md= new Remarkable ()
 export default function App() { 
   const handleBoldClick = ()=>{
     console.log("bold was clicked" + text);
@@ -52,38 +52,36 @@ const handleClearClick = ()=>{
   const [text, setText] = useState("");
   return (
     <>
-    <div>
-    <div className='container'>
-      {/* <h1>{props.heading}</h1> */}
-     <main className='main'>
-      
-       <nav className="navbar">
-                 <button className="btn1" onClick={handleBoldClick}>Bold</button>
+    <h1 className='header'>Text Editor</h1>
+    <div className='complete'>
+      <nav className="navbar">
+                <button className="btn1" onClick={handleBoldClick}>Bold</button>
                 <button className="btn2"onClick={handleItalicClick}>Italic</button>
                 <button className="btn3"onClick={handleUnderlineClick}>Underline</button>
                 <button className="btn4"onClick={handleStrikeClick}>Strike Through</button>
                 <button className="btn5"onClick={handleUpperClick}>Upper Case</button>
                 <button className="btn6"onClick={handleLowerClick}>Lower Case</button>
                 <button className="btn7"onClick={handleClearClick}>Clear</button>
-
        </nav>
 
-       <h1 className='texteditor'>Text Editor</h1>
-       <article>
-         <label htmlFor='markdown' className='label'></label>
-         <textarea name='textarea' id='markdown' cols="100" rows="10" placeholder='Type some text here'
-         value={text}
-         onChange={(e)=>setText(e.target.value)}
-         ></textarea>
-       <h3>Output</h3>
-       <div className="output" dangerouslySetInnerHTML={{__html:md.render(text)}}></div>
-       </article>
-       
-     </main>
-    </div>
-    </div>
     <div className='container'>
-      <p>{text.split(" ").length} words {text.length} characters</p>
+     
+      
+       
+        {/* <div className='input'>   */}
+       {/* <h3 className='inputText'>Text Input</h3> */}
+       {/* <article > */}
+         {/* <label htmlFor='markdown' className='label'></label> */}
+         <textarea name='textarea' id='markdown' cols="700" rows="10" placeholder='Type some text here' value={text}onChange={(e)=>setText(e.target.value)}
+         ></textarea>
+         {/* </article> */}
+         {/* </div> */}
+         </div>
+         <div className='container'>        
+         <h3 className='output'>Output</h3>
+       <div className="output1" dangerouslySetInnerHTML={{__html:md.render(text)}}></div>
+       <p className='info'>{text.split(" ").length} words {text.length} characters</p>
+    </div>
     </div>
     </>
   );
