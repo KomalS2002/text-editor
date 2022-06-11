@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-
+//import ReactDOM from 'react-dom/client';
 import './App.css';
 import  {useState} from 'react';
 import { Remarkable } from 'remarkable';
@@ -9,10 +9,14 @@ const md= new Remarkable ()
 export default function App() { 
   const handleBoldClick = ()=>{
     console.log("bold was clicked" + text);
-    let newText= text.style.fontWeight="bold"();
+    let newText= text.style.fontWeight="45"();
     setText(newText)
   
 }
+// const bold= ReactDom.document.createBold(document.getElementsByClassName('btn1'));
+// bold.addEventListener("click", ()=>{
+//   document.execCommand("bold")
+// })
 // const handleOnClick = (event)=>{
 //     console.log("On Change");
 //     setText(event.target.value);
@@ -55,13 +59,14 @@ const handleClearClick = ()=>{
     <h1 className='header'>Text Editor</h1>
     <div className='complete'>
       <nav className="navbar">
-                <button className="btn1" onClick={handleBoldClick}>Bold</button>
+                <button className="btn1"onClick={handleBoldClick}>Bold</button>
                 <button className="btn2"onClick={handleItalicClick}>Italic</button>
                 <button className="btn3"onClick={handleUnderlineClick}>Underline</button>
                 <button className="btn4"onClick={handleStrikeClick}>Strike Through</button>
                 <button className="btn5"onClick={handleUpperClick}>Upper Case</button>
                 <button className="btn6"onClick={handleLowerClick}>Lower Case</button>
                 <button className="btn7"onClick={handleClearClick}>Clear</button>
+                <input type="color" className='color'/>
        </nav>
 
     <div className='container'>

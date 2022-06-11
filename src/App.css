@@ -140,6 +140,17 @@ height: 500px;
   
   color:purple;
 }
+.color{
+  background-color: black;
+  border-color: rgb(106, 9, 119) ;
+  border-radius: 5px;
+  padding: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  color:purple;
+
+}
 .label{
   margin-top: 5px;
   margin-bottom: 3px;
