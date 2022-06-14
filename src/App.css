@@ -1,4 +1,5 @@
 
+
 .App{
   display: flex;
 }
@@ -8,18 +9,26 @@
   }
   
   *{
-   
+     /* margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;  */
    box-sizing: border-box;
    font-family: 'Alegreya', serif;
+   /* background-image: url(abstract-background-soft-color_206846-902.jpg); */
+   
   }
+  
   .header{
-    background-color: rgb(106, 9, 119);
-    color: rgb(12, 1, 14);
-    margin-top: 0;
+    background-color: rgb(153, 207, 171);
+    color: whitesmoke;
+    margin-top: 2px;
     margin-bottom: 0;
     text-align: center;
     animation: animate 200s ease-in-out infinite;
-    border: 3px solid black;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
   @keyframes animate
   {
@@ -32,20 +41,27 @@
     }
   }
   .container{
-    border: 1px solid rgb(106, 9,119);
+    
     float: left;
     width: 50%;
-    background-color: black;
+    
+    background-color: whitesmoke;
     height: 768px;
-    border: 1px solid rgb(106, 9, 119);
+    border: 1px solid rgb(106, 177, 141);
+    /* margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px; */
     
     
   }
 
   .complete .navbar{
     width: 100%;
-    background-color: black;
+    background-color: white;
     height: 80px;
+    
+    
     
    }
 .input{
@@ -54,101 +70,108 @@ height: 500px;
 /* margin-top: 80px; */
 }
 .inputText{
-  color: rgb(106, 9, 119);
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 #markdown{
   width: 100%;
   height: 768px;
-  background-color: black;
-  color: white;
-  border: 1px solid rgb(106, 9, 119);
+  background-color: whitesmoke;
+  color: black;
+  border: 1px solid rgb(106, 177,141);
+  border-right: none;
 }
 .btn1{
-  background-color: black;
+  background-color: rgb(106,177,141);
   border-radius: 5px;
-  border-color: rgb(106, 9, 119) ;
+  border-color: rgb(106, 177, 141) ;
   padding: 3px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  color:purple;
+  color:rgb(10, 2, 10);
+  font-weight: bold;
+  /* height: 30px;
+  width: 40px;
+  font-size: 25px; */
 
 }
 .btn2{
-  background-color: black;
-  border-color: rgb(106, 9, 119) ;
+  background-color: rgb(106,177,141);
+  border-color: rgb(106, 177, 141) ;
   border-radius: 5px;
   padding: 3px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  color:purple;
+  color:black;
+  font-style: italic;
 
 }
 .btn3{
-  background-color: black;
-  border-color: rgb(106, 9, 119) ;
+  background-color: rgb(106,177,141);
+  border-color: rgb(106, 177, 141) ;
   border-radius: 5px;
   padding: 3px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  color:purple;
+  color:black;
+  text-decoration: underline;
 }
 .btn4{
-  background-color:black;
-  border-color: rgb(106, 9, 119) ;
+  background-color:rgb(106,177,141);
+  border-color: rgb(106, 177, 141) ;
   border-radius: 5px;
   padding: 3px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  
-  color:purple;
+  text-decoration: line-through;
+  color:black;
 
 }
 .btn5{
-  background-color: black;
-  border-color: rgb(106, 9, 119) ;
+  background-color: rgb(106,177,141);
+  border-color: rgb(106, 177, 141) ;
   border-radius: 5px;
   padding: 3px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  color:purple;
+  color:black;
 
 }
 .btn6{
-  background-color:black ;
-  border-color: rgb(106, 9, 119) ;
+  background-color:rgb(106,177,141) ;
+  border-color: rgb(106, 177, 141) ;
   border-radius: 5px;
   padding: 3px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  color:purple;
+  color:black;
 }
 .btn7{
-  background-color:black;
-  border-color: rgb(106, 9, 119) ;
+  background-color:rgb(106,177,141);
+  border-color: rgb(106, 177, 141) ;
   border-radius: 5px;
   padding: 3px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   
-  color:purple;
+  color:black;
 }
 .color{
-  background-color: black;
-  border-color: rgb(106, 9, 119) ;
+  background-color: rgb(106,177,141);
+  border-color: rgb(106, 177, 141) ;
   border-radius: 5px;
   padding: 3px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  color:purple;
+  color:black;
 
 }
 .label{
@@ -174,24 +197,65 @@ h6{
   font-size: 16px;
 }
 #markdown{
-  border-radius: 5px;
+  border-radius: 5px solid rgb(106,177,141);
 
 }
 .texteditor{
   color: rgb(106, 9, 119);
 }
 .output{
-  color: rgb(106, 9, 119);
+  color: black;
   text-align: center;
   font-family: 'Alegreya', serif;
+  margin-top: 0px;
 }
 .output1{
-  color:white;
+  color:black;
 }
 .info{
-  color: white;
+  color: black;
+  margin-top: 700px;
 }
 .textarea{
   width: 100%;
-  background-color: black;
+  background-color: rgb(106,177,141);
 }
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: whitesmoke;
+} */
+
+.App-link {
+  color: #61dafb;
+}
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

@@ -1,71 +1,106 @@
+
 //import logo from './logo.svg';
 //import ReactDOM from 'react-dom/client';
 import './App.css';
 import  {useState} from 'react';
 import { Remarkable } from 'remarkable';
-//import { hasSelectionSupport } from '@testing-library/user-event/dist/utils';
-//import TextForm from 'TextForm.js'
+
 const md= new Remarkable ()
+
 export default function App() { 
+  const [text, setText] = useState("");
+  const [isBold, setIsBold] = useState(true);
+
   const handleBoldClick = ()=>{
-    console.log("bold was clicked" + text);
-    let newText= text.style.fontWeight="45"();
-    setText(newText)
-  
-}
-// const bold= ReactDom.document.createBold(document.getElementsByClassName('btn1'));
-// bold.addEventListener("click", ()=>{
-//   document.execCommand("bold")
-// })
-// const handleOnClick = (event)=>{
-//     console.log("On Change");
-//     setText(event.target.value);
-// };
+    let output=document.querySelector(".output1")
+    if(isBold){
+      output.style.fontWeight = "bold"
+      setIsBold(false);
+    }else{
+      output.style.fontWeight = "normal"
+      setIsBold(true);
+    }
+ };
+const [isItalic, setIsItalic] =useState(true);
 const handleItalicClick = ()=>{
-    console.log("italic was clicked"+ text);
-    let newText=text.italics();
-    setText(newText);
+   let output=document.querySelector(".output1")
+   if(isItalic){
+     output.style.fontStyle = "italic"
+     setIsItalic(false);
+    }else{
+      output.style.fontStyle = "normal"
+      setIsItalic(true);
+    }
 }; 
+const [isUnderline, setIsUnderline]= useState(true);
 const handleUnderlineClick = ()=>{
-    console.log("underLine was clicked"+ text);
-    let newText=text.underline();
-    setText(newText);
+    let output=document.querySelector(".output1")
+    if(isUnderline){
+      output.style.textDecoration = "underline"
+      setIsUnderline(false);
+    } 
+    else{
+      output.style.textDecoration= "none"
+      setIsUnderline(true);
+    }
 }
+const [isStrike , setIsStrike] = useState(true);
 const handleStrikeClick = ()=>{
-    console.log("Strike was clicked"+ text);
-    let newText=text.strike();
-    setText(newText);
+    let output = document.querySelector(".output1")
+    if(isStrike){
+      output.style.textDecoration = "line-through"
+      setIsStrike(false);
+    }
+    else{
+      output.style.textDecoration = "none"
+      setIsStrike(true);
+    }
 }
+const [isUpperCase, setIsUpperCase] = useState(true);
 const handleUpperClick = ()=>{
-    console.log("upperCase was clicked"+ text);
-    let newText=text.toUpperCase();
-    setText(newText);
+    let output = document.querySelector(".output1")
+    if(isUpperCase){
+      output.style.textTransform = "uppercase"
+      setIsUpperCase(false);
+    }
+    else{
+    output.style.textTransform = "none"
+    setIsUpperCase(true);
+    }
 }
+const [isLowerCase, setIsLowerCase] = useState(true);
 const handleLowerClick = ()=>{
-    console.log("lowerCase was clicked"+ text);
-    let newText=text.toLowerCase();
-    setText(newText);
+    let output = document.querySelector(".output1")
+    if(isLowerCase){
+      output.style.textTransform = "lowercase"
+      setIsLowerCase(false);
+    }
+    else{
+      output.style.textTransform = "none"
+      setIsLowerCase(true);
+    }
 }
 const handleClearClick = ()=>{
-  console.log("Clear was clicked"+ text);
+  // let output = document.querySelector(".output1")
+  // output.style.textTransform = " "
+ console.log("Clear was clicked"+ text);
   let newText='';
   setText(newText);
 }
-
-
-  const [text, setText] = useState("");
   return (
     <>
+    <div className= 'entity'>
     <h1 className='header'>Text Editor</h1>
     <div className='complete'>
       <nav className="navbar">
-                <button className="btn1"onClick={handleBoldClick}>Bold</button>
-                <button className="btn2"onClick={handleItalicClick}>Italic</button>
-                <button className="btn3"onClick={handleUnderlineClick}>Underline</button>
-                <button className="btn4"onClick={handleStrikeClick}>Strike Through</button>
-                <button className="btn5"onClick={handleUpperClick}>Upper Case</button>
-                <button className="btn6"onClick={handleLowerClick}>Lower Case</button>
+                <button className="btn1"onClick={handleBoldClick}>B</button>
+                <button className="btn2"onClick={handleItalicClick}>I</button>
+                <button className="btn3"onClick={handleUnderlineClick}>U</button>
+                <button className="btn4"onClick={handleStrikeClick}>Strike</button>
+                <button className="btn5"onClick={handleUpperClick}>AA</button>
+                <button className="btn6"onClick={handleLowerClick}>aa</button>
                 <button className="btn7"onClick={handleClearClick}>Clear</button>
+                {/* <button className="btn8"onClick={handleColorClick}>Color</button> */}
                 <input type="color" className='color'/>
        </nav>
 
@@ -85,10 +120,15 @@ const handleClearClick = ()=>{
          <div className='container'>        
          <h3 className='output'>Output</h3>
        <div className="output1" dangerouslySetInnerHTML={{__html:md.render(text)}}></div>
-       <p className='info'>{text.split(" ").length} words {text.length} characters</p>
+       <p className='info'>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</p>
+    </div>
     </div>
     </div>
     </>
   );
 }
+
+
+
+
 
