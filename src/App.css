@@ -7,20 +7,18 @@
   width: 100%;
   height: 100%;
   }
-  
+/*   
   *{
-     /* margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;  */
+    
    box-sizing: border-box;
-   font-family: 'Alegreya', serif;
-   /* background-image: url(abstract-background-soft-color_206846-902.jpg); */
    
-  }
+   } */
+   .entity{
+    background: linear-gradient(to bottom right,rgb(41, 177, 147),rgb(65, 65, 223));
+   }
   
   .header{
-    background-color: rgb(153, 207, 171);
+    /* background-color: rgb(153, 207, 171); */
     color: whitesmoke;
     margin-top: 2px;
     margin-bottom: 0;
@@ -29,6 +27,8 @@
     border-radius: 10px;
     margin-left: 5px;
     margin-right: 5px;
+    font-family: 'Lobster', cursive;
+
   }
   @keyframes animate
   {
@@ -40,29 +40,59 @@
       text-shadow: 0 0 10px rgb(216, 235, 46);
     }
   }
-  .container{
+  .complete{
+    display: flex;
+    flex-direction: row;
+  }
+  .container1{
     
-    float: left;
+    /* float: left; */
+    
     width: 50%;
-    
+    border-radius: 20px;
     background-color: whitesmoke;
     height: 768px;
     border: 1px solid rgb(106, 177, 141);
-    /* margin-top: 20px;
-    margin-bottom: 20px;
     margin-left: 20px;
-    margin-right: 20px; */
-    
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    opacity: 0.8;
+    box-shadow: 5px 5px 5px rgb(56,55,55);
   }
+  
+  
+  
+  .container2{
+    width: 50%;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    height: 768px;
+    border: 1px solid rgb(106, 177, 141);
+    
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    opacity: 0.8;
+    box-shadow: 7px 7px 5px rgb(56, 55, 55);
+  }
+    
+    
 
-  .complete .navbar{
-    width: 100%;
-    background-color: white;
-    height: 80px;
-    
-    
-    
+  .navbar{
+    width:auto;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
+    height: 40px;
+    opacity: 0.8;
+    border-radius: 10px;
+    box-shadow: 7px 7px 5px rgb(56,55,55);
    }
 .input{
 width: 100%;
@@ -73,106 +103,139 @@ height: 500px;
   color: rgb(0, 0, 0);
   text-align: center;
 }
-#markdown{
-  width: 100%;
-  height: 768px;
-  background-color: whitesmoke;
-  color: black;
-  border: 1px solid rgb(106, 177,141);
-  border-right: none;
-}
+
 .btn1{
-  background-color: rgb(106,177,141);
-  border-radius: 5px;
-  border-color: rgb(106, 177, 141) ;
-  padding: 3px;
+  
+  height: 30px;
+  width: 40px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  color:rgb(10, 2, 10);
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147);
+  background-color: rgb(41, 177, 147);
+  color:black;
   font-weight: bold;
-  /* height: 30px;
-  width: 40px;
-  font-size: 25px; */
-
+  font-size: 25px;
+  text-align: center;
+  box-shadow: 3px 3px 3px rgb(56,55,55);
 }
 .btn2{
-  background-color: rgb(106,177,141);
-  border-color: rgb(106, 177, 141) ;
-  border-radius: 5px;
-  padding: 3px;
+  height: 30px;
+  width: 40px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147) ;
+  background-color: rgb(41, 177, 147);
   color:black;
   font-style: italic;
-
+  font-size: 25px;
+  box-shadow: 3px 3px 3px rgb(56,55,55);
 }
 .btn3{
-  background-color: rgb(106,177,141);
-  border-color: rgb(106, 177, 141) ;
-  border-radius: 5px;
-  padding: 3px;
+  height: 30px;
+  width: 40px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147) ;
+  background-color: rgb(41, 177, 147);
   color:black;
   text-decoration: underline;
+  font-size: 25px;
+  box-shadow: 3px 3px 3px rgb(56,55,55);
 }
 .btn4{
-  background-color:rgb(106,177,141);
-  border-color: rgb(106, 177, 141) ;
-  border-radius: 5px;
-  padding: 3px;
+  height: 30px;
+  width: 50px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147) ;
+  background-color: rgb(41, 177, 147);
   text-decoration: line-through;
   color:black;
+  font-size: 25px;
+  box-shadow: 3px 3px 3px rgb(56,55,55);
 
 }
 .btn5{
-  background-color: rgb(106,177,141);
-  border-color: rgb(106, 177, 141) ;
-  border-radius: 5px;
-  padding: 3px;
+  height: 30px;
+  width: 50px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147) ;
+  background-color: rgb(41, 177, 147);
+  font-size: 25px;
   color:black;
-
+  box-shadow: 3px 3px 3px rgb(56,55,55);
 }
 .btn6{
-  background-color:rgb(106,177,141) ;
-  border-color: rgb(106, 177, 141) ;
-  border-radius: 5px;
-  padding: 3px;
+  height: 30px;
+  width: 50px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147) ;
+  background-color: rgb(41, 177, 147);
+  font-size: 25px;
   color:black;
+  box-shadow: 3px 3px 3px rgb(56,55,55);
 }
 .btn7{
-  background-color:rgb(106,177,141);
-  border-color: rgb(106, 177, 141) ;
-  border-radius: 5px;
-  padding: 3px;
+  height: 30px;
+  width: 80px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147) ;
+  background-color: rgb(41, 177, 147);
+  font-size: 25px;
   color:black;
+  box-shadow: 3px 3px 3px rgb(56,55,55);
 }
-.color{
-  background-color: rgb(106,177,141);
-  border-color: rgb(106, 177, 141) ;
-  border-radius: 5px;
-  padding: 3px;
+.btn8{
+  height: 30px;
+  width: 90px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147) ;
+  background-color: rgb(41, 177, 147);
+  font-size: 25px;
   color:black;
-
+  box-shadow: 3px 3px 3px rgb(56,55,55);
+}
+.btn9{
+  height: 30px;
+  width: 80px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147) ;
+  background-color: rgb(41, 177, 147);
+  font-size: 25px;
+  color:black;
+  box-shadow: 3px 3px 3px rgb(56,55,55);
 }
 .label{
   margin-top: 5px;
