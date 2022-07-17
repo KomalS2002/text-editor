@@ -117,7 +117,7 @@ height: 500px;
   background-color: rgb(41, 177, 147);
   color:black;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 15px;
   text-align: center;
   box-shadow: 3px 3px 3px rgb(56,55,55);
 }
@@ -133,7 +133,7 @@ height: 500px;
   background-color: rgb(41, 177, 147);
   color:black;
   font-style: italic;
-  font-size: 25px;
+  font-size: 15px;
   box-shadow: 3px 3px 3px rgb(56,55,55);
 }
 .btn3{
@@ -148,12 +148,12 @@ height: 500px;
   background-color: rgb(41, 177, 147);
   color:black;
   text-decoration: underline;
-  font-size: 25px;
+  font-size: 15px;
   box-shadow: 3px 3px 3px rgb(56,55,55);
 }
 .btn4{
   height: 30px;
-  width: 50px;
+  width: 40px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
@@ -163,13 +163,13 @@ height: 500px;
   background-color: rgb(41, 177, 147);
   text-decoration: line-through;
   color:black;
-  font-size: 25px;
+  font-size: 15px;
   box-shadow: 3px 3px 3px rgb(56,55,55);
 
 }
 .btn5{
   height: 30px;
-  width: 50px;
+  width: 40px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
@@ -177,12 +177,26 @@ height: 500px;
   border-radius: 5px;
   border-color: rgb(41, 177, 147) ;
   background-color: rgb(41, 177, 147);
-  font-size: 25px;
+  font-size: 15px;
   color:black;
   box-shadow: 3px 3px 3px rgb(56,55,55);
 }
 .btn6{
   height: 30px;
+  width: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147) ;
+  background-color: rgb(41, 177, 147);
+  font-size: 15px;
+  color:black;
+  box-shadow: 3px 3px 3px rgb(56,55,55);
+}
+.btn7{
+  height: 30px;
   width: 50px;
   margin-left: 5px;
   margin-right: 5px;
@@ -191,13 +205,13 @@ height: 500px;
   border-radius: 5px;
   border-color: rgb(41, 177, 147) ;
   background-color: rgb(41, 177, 147);
-  font-size: 25px;
+  font-size: 15px;
   color:black;
   box-shadow: 3px 3px 3px rgb(56,55,55);
 }
-.btn7{
+.btn8{
   height: 30px;
-  width: 80px;
+  width: 60px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
@@ -205,11 +219,25 @@ height: 500px;
   border-radius: 5px;
   border-color: rgb(41, 177, 147) ;
   background-color: rgb(41, 177, 147);
-  font-size: 25px;
+  font-size: 15px;
   color:black;
   box-shadow: 3px 3px 3px rgb(56,55,55);
 }
-.btn8{
+.btn9{
+  height: 30px;
+  width: 60px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border-color: rgb(41, 177, 147) ;
+  background-color: rgb(41, 177, 147);
+  font-size: 15px;
+  color:black;
+  box-shadow: 3px 3px 3px rgb(56,55,55);
+}
+.btn10{
   height: 30px;
   width: 90px;
   margin-left: 5px;
@@ -219,23 +247,27 @@ height: 500px;
   border-radius: 5px;
   border-color: rgb(41, 177, 147) ;
   background-color: rgb(41, 177, 147);
-  font-size: 25px;
+  
   color:black;
+  font-size: 15px;
   box-shadow: 3px 3px 3px rgb(56,55,55);
+
 }
-.btn9{
+.filename{
   height: 30px;
-  width: 80px;
+  width: 90px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
   border-radius: 5px;
   border-color: rgb(41, 177, 147) ;
-  background-color: rgb(41, 177, 147);
-  font-size: 25px;
+  /* background-color: rgb(41, 177, 147); */
+  
   color:black;
+  font-size: 15px;
   box-shadow: 3px 3px 3px rgb(56,55,55);
+
 }
 .label{
   margin-top: 5px;
