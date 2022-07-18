@@ -139,26 +139,24 @@ const handleLowerClick = ()=>{
       }
     })
   }
-  //  const handleLogout =()=>{
-  //   sessionStorage.setItem("userToken", '');
-  //   sessionStorage.clear();
-  //   history.push("/sigin"); 
-  //  }
+  
     return (
       <div>
-        <div className= 'entity'>
+        <div className='entity'>
+          <div className='main'>
     <h1 className='header'>Text Editor</h1>
+          <div className='main1'>
       <nav className="navbar">
-                <button className="btn1"onClick={handleBoldClick}>B</button>
-                <button className="btn2"onClick={handleItalicClick}>I</button>
-                <button className="btn3"onClick={handleUnderlineClick}>U</button>
-                <button className="btn4"onClick={handleStrikeClick}>abc</button>
-                <button className="btn5"onClick={handleUpperClick}>AA</button>
-                <button className="btn6"onClick={handleLowerClick}>aa</button>
-                <button className="btn7"onClick={handleClearClick}>Clear</button>
-                <button className='btn8'onClick={getText}>Select</button>
-                <button className="btn9" onClick={handleColorClick}>Color</button>
-                <button className="btn10"onClick={downloadFile}>Download</button>               
+                <button className="bold"onClick={handleBoldClick}>B</button>
+                <button className="italic"onClick={handleItalicClick}>I</button>
+                <button className="underline"onClick={handleUnderlineClick}>U</button>
+                <button className="strike"onClick={handleStrikeClick}>abc</button>
+                <button className="uppercase"onClick={handleUpperClick}>AA</button>
+                <button className="lowercase"onClick={handleLowerClick}>aa</button>
+                <button className="clear"onClick={handleClearClick}>Clear</button>
+                <button className='select'onClick={getText}>Select</button>
+                <button className="color" onClick={handleColorClick}>Color</button>
+                <button className="download"onClick={downloadFile}>Download</button>               
                 <input type="text" className="filename" placeholder='untitled'></input>
                 {/* <input type="color" className='btn1' onClick={handleColorClick}/>      */}
                 <button className='logout'onClick={handleLogout}>logout</button>
@@ -171,13 +169,15 @@ const handleLowerClick = ()=>{
          
         
          <div className='container2'>        
-         <h3 className='output'>Output</h3>
+         {/* <h3 className='output'>Output</h3> */}
        <div className="output1" dangerouslySetInnerHTML={{__html:md.render(text)}}></div>
        <p className='info'>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</p>
     </div>
     </div>
     </div>
-      </div>
+    </div>
+    </div>
+    </div> 
     )
   }
   

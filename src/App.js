@@ -216,6 +216,7 @@ useEffect(()=>{
 //   }
   return (
     <>
+    
     {
       user? 
       (<TextForm handleLogout={handleLogout}/>):
@@ -272,6 +273,7 @@ useEffect(()=>{
     </div>
     </div> */}
     {/* <TextForm handleLogout={handleLogout}/> */}
+    
     </>
   );
 }
