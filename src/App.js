@@ -8,6 +8,8 @@ import { Remarkable } from 'remarkable';
 import fire from './Components/fire';
 import Login from './Components/login';
 import TextForm from './Components/TextForm';
+//import Image from './Components/logobyme.png';
+
 //import { useHistory } from "react-router-dom";
 
 const md= new Remarkable ()
@@ -232,6 +234,7 @@ useEffect(()=>{
         passwordError={passwordError}/>)
         
     }
+    
     {/* <Login email={email} 
     setEmail={setEmail} 
     password={password} 

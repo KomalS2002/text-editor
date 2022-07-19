@@ -1,9 +1,19 @@
   import React from 'react'
-  //import './App.css';
   import  {useState} from 'react';
   import { Remarkable } from 'remarkable';
   // import {useHistory } from "react-router-dom";
-   
+  import FormatBoldRoundedIcon from '@mui/icons-material/FormatBoldRounded';
+  import FormatItalicRoundedIcon from '@mui/icons-material/FormatItalicRounded';
+  import FormatUnderlinedRoundedIcon from '@mui/icons-material/FormatUnderlinedRounded';
+  import StrikethroughSRoundedIcon from '@mui/icons-material/StrikethroughSRounded';
+  import FormatColorTextIcon from '@mui/icons-material/FormatColorText';
+  import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
+  import AbcRoundedIcon from '@mui/icons-material/AbcRounded';
+  import BackspaceRoundedIcon from '@mui/icons-material/BackspaceRounded';
+  import BeenhereRoundedIcon from '@mui/icons-material/BeenhereRounded';
+  import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+  //import Image from 'logobyme.png';
+
   const md= new Remarkable ()
   function TextForm(props) {
     const{handleLogout}=props;
@@ -97,7 +107,7 @@ const handleLowerClick = ()=>{
       }
       else{
         if(document.selection){
-          var text2 = document.selection.creteRange();
+          var text2 = document.selection.createRange();
           alert(text2);
         }
       }
@@ -143,28 +153,30 @@ const handleLowerClick = ()=>{
     return (
       <div>
         <div className='entity'>
+          <div className='header'>
+            <div id='logo'></div>
+    <h1 className='header1'>Textoria</h1></div>
           <div className='main'>
-    <h1 className='header'>Text Editor</h1>
           <div className='main1'>
       <nav className="navbar">
-                <button className="bold"onClick={handleBoldClick}>B</button>
-                <button className="italic"onClick={handleItalicClick}>I</button>
-                <button className="underline"onClick={handleUnderlineClick}>U</button>
-                <button className="strike"onClick={handleStrikeClick}>abc</button>
-                <button className="uppercase"onClick={handleUpperClick}>AA</button>
+                <button className="bold"onClick={handleBoldClick}><FormatBoldRoundedIcon/></button>
+                <button className="italic"onClick={handleItalicClick}><FormatItalicRoundedIcon/></button>
+                <button className="underline"onClick={handleUnderlineClick}><FormatUnderlinedRoundedIcon/></button>
+                <button className="strike"onClick={handleStrikeClick}><StrikethroughSRoundedIcon/></button>
+                <button className="uppercase"onClick={handleUpperClick}><AbcRoundedIcon/></button>
                 <button className="lowercase"onClick={handleLowerClick}>aa</button>
-                <button className="clear"onClick={handleClearClick}>Clear</button>
-                <button className='select'onClick={getText}>Select</button>
-                <button className="color" onClick={handleColorClick}>Color</button>
-                <button className="download"onClick={downloadFile}>Download</button>               
+                <button className="clear"onClick={handleClearClick}><BackspaceRoundedIcon/></button>
+                <button className='select'onClick={getText}><BeenhereRoundedIcon/></button>
+                <button className="color" onClick={handleColorClick}><FormatColorTextIcon/></button>
+                <button className="download"onClick={downloadFile}><DownloadRoundedIcon/></button>               
                 <input type="text" className="filename" placeholder='untitled'></input>
                 {/* <input type="color" className='btn1' onClick={handleColorClick}/>      */}
-                <button className='logout'onClick={handleLogout}>logout</button>
+                <button className='logout'onClick={handleLogout}><LogoutRoundedIcon/></button>
       </nav>
     <div className='complete'>
 
     
-     <textarea name='textarea' className='container1' cols="700" rows="10" placeholder='  Type some text here' value={text}onChange={(e)=>setText(e.target.value)}
+     <textarea name='textarea' className='container1' cols="300" rows="10" placeholder='Type some text here' value={text}onChange={(e)=>setText(e.target.value)}
          ></textarea>
          
         

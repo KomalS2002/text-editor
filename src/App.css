@@ -7,51 +7,58 @@
 
 .html .body #root{
   width: 100%;
-  height: auto;
+  /* height: 100vw; */
   }
-
- 
-  
-   
-   .entity{
+  .entity{
     display: flex;
-    height: 100%;
+    flex-wrap: wrap;
+    height:100%;
     width: 100%;
-    background: linear-gradient(to bottom right,rgb(41, 177, 147),rgb(65, 65, 223));
+    background: linear-gradient(to right,#A38ED2,#F9C1EB);
     margin-left: 0px;
     margin-right: 0;
     margin-bottom: 0;
     margin-top: 0;
+    font-family: roboto;
    }
 
    .main{
    
-    margin-left: 50px;
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
-   }
-   .main1{
+    flex-wrap: wrap ;
+    overflow-x: hidden;
+    border-radius: 15px ;
+    border: 1px black;
+  }
+  .main1{
+     border: 2px black;
     display:flex;
     width: 100%;
     height: auto;
-    /* margin-top: 100px;
-    margin-left: 100px; */
+   
   }
   .header{
-    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    /* background-color: black; */
     opacity: 0.8;
     color: rgb(92, 29, 211);
     width: 100%;
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 0;
-    text-align: center;
-    animation: animate 200s ease-in-out infinite;
+    text-align: left;
+    /* animation: animate 200s ease-in-out infinite;
     
    
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster', cursive; */
 
   }
-  @keyframes animate
+  /* @keyframes animate
   {
     from{
       text-shadow: 0 0 20px rgb(216, 235, 46);
@@ -60,11 +67,18 @@
       text-shadow: 0 0 30px rgb(216, 235, 46);
       text-shadow: 0 0 10px rgb(216, 235, 46);
     }
+  } */
+  #logo{
+    /* background-image: url(logobyme.png); */
+    width: 90px;
   }
   .complete{
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin-right: 0;
+    justify-content: center;
+    
   }
   .container1{
     
@@ -73,9 +87,12 @@
     width: 100%;
     background-color: whitesmoke;
     height: 50%;
-    border: 1px solid rgb(106, 177, 141);
+    overflow-x: hidden;
     opacity: 0.8;
-    box-shadow: 5px 5px 5px rgb(56,55,55);
+    margin-right: 5px;
+    box-shadow: 7px 7px 5px rgb(56,55,55);
+    justify-content: center;
+    overflow-x: hidden;
   }
   
   
@@ -87,13 +104,15 @@
     border: 1px solid rgb(106, 177, 141);
     opacity: 0.8;
     box-shadow: 7px 7px 5px rgb(56, 55, 55);
-    display: block;
+    overflow-x: hidden;
   }
     
     
 
   .navbar{
-    width:100px;
+    display: flex;
+    flex-direction: column;
+    width:150px;
     height: 100%;
     padding-left: 20px;
     background-color: whitesmoke;
@@ -106,170 +125,147 @@
   text-align: center;
 }
 
-.btn1{
+.bold{
   
-  height: 30px;
-  width: 40px;
+  
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147);
-  background-color: rgb(41, 177, 147);
+  border: none;
+  cursor: pointer;
   color:black;
-  font-weight: bold;
-  font-size: 15px;
-  text-align: center;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
+  
+  
 }
-.btn2{
-  height: 30px;
-  width: 40px;
+.italic{
+  
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147) ;
-  background-color: rgb(41, 177, 147);
+  border: none;
+  cursor: pointer;
   color:black;
-  font-style: italic;
-  font-size: 15px;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
+  
+ 
 }
-.btn3{
-  height: 30px;
-  width: 40px;
+.underline{
+ 
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147) ;
-  background-color: rgb(41, 177, 147);
+  border: none;
   color:black;
-  text-decoration: underline;
-  font-size: 15px;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
-}
-.btn4{
-  height: 30px;
-  width: 40px;
+  cursor: pointer;
+  }
+.strike{
+  
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147) ;
-  background-color: rgb(41, 177, 147);
-  text-decoration: line-through;
+  border: none;
+  cursor: pointer;
   color:black;
-  font-size: 15px;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
+  
+  
 
 }
-.btn5{
-  height: 30px;
-  width: 40px;
+.uppercase{
+  
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147) ;
-  background-color: rgb(41, 177, 147);
-  font-size: 15px;
+  border: none;
+  cursor: pointer;
   color:black;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
+  
 }
-.btn6{
-  height: 30px;
-  width: 40px;
+.lowercase{
+ 
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147) ;
-  background-color: rgb(41, 177, 147);
-  font-size: 15px;
+  cursor: pointer;
+  border: none;
   color:black;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
+  
 }
-.btn7{
+.clear{
+ 
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  cursor: pointer;
+  color:black;
+  
+}
+.select{
+  
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  cursor: pointer;
+  color:black;
+ 
+}
+.color{
+ 
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  color:black;
+  cursor: pointer;
+  
+}
+.download{
+  
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  cursor: pointer;
+  color:black;
+  
+
+}
+.filename{
   height: 30px;
   width: 50px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147) ;
-  background-color: rgb(41, 177, 147);
-  font-size: 15px;
-  color:black;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
-}
-.btn8{
-  height: 30px;
-  width: 60px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147) ;
-  background-color: rgb(41, 177, 147);
-  font-size: 15px;
-  color:black;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
-}
-.btn9{
-  height: 30px;
-  width: 60px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147) ;
-  background-color: rgb(41, 177, 147);
-  font-size: 15px;
-  color:black;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
-}
-.btn10{
-  height: 30px;
-  width: 90px;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147) ;
-  background-color: rgb(41, 177, 147);
-  
+  border: none;
   color:black;
   font-size: 15px;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
+  border: 1px black;
+  cursor: pointer;
 
 }
-.filename{
-  height: 30px;
-  width: 90px;
+.logout{
+  
+  
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
-  border-radius: 5px;
-  border-color: rgb(41, 177, 147) ;
-  /* background-color: rgb(41, 177, 147); */
-  
+  border: none;
+ cursor: pointer;
   color:black;
-  font-size: 15px;
-  box-shadow: 3px 3px 3px rgb(56,55,55);
-
+  
+  
 }
 .label{
   margin-top: 5px;
@@ -313,6 +309,7 @@ h6{
 .info{
   color: black;
   margin-top: 700px;
+  
 
 }
 .textarea{
