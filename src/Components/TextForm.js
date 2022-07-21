@@ -12,7 +12,7 @@
   import BackspaceRoundedIcon from '@mui/icons-material/BackspaceRounded';
   import BeenhereRoundedIcon from '@mui/icons-material/BeenhereRounded';
   import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
-  //import Image from 'logobyme.png';
+  
 
   const md= new Remarkable ()
   function TextForm(props) {
@@ -154,29 +154,30 @@ const handleLowerClick = ()=>{
       <div>
         <div className='entity'>
           <div className='header'>
-            <div id='logo'></div>
+            <div ><img className='logo' src='/images/logobyme.png' alt=''/></div>
     <h1 className='header1'>Textoria</h1></div>
+          
           <div className='main'>
-          <div className='main1'>
       <nav className="navbar">
-                <button className="bold"onClick={handleBoldClick}><FormatBoldRoundedIcon/></button>
-                <button className="italic"onClick={handleItalicClick}><FormatItalicRoundedIcon/></button>
-                <button className="underline"onClick={handleUnderlineClick}><FormatUnderlinedRoundedIcon/></button>
-                <button className="strike"onClick={handleStrikeClick}><StrikethroughSRoundedIcon/></button>
-                <button className="uppercase"onClick={handleUpperClick}><AbcRoundedIcon/></button>
-                <button className="lowercase"onClick={handleLowerClick}>aa</button>
-                <button className="clear"onClick={handleClearClick}><BackspaceRoundedIcon/></button>
-                <button className='select'onClick={getText}><BeenhereRoundedIcon/></button>
-                <button className="color" onClick={handleColorClick}><FormatColorTextIcon/></button>
-                <button className="download"onClick={downloadFile}><DownloadRoundedIcon/></button>               
+                <button className="button"onClick={handleBoldClick}><FormatBoldRoundedIcon/></button>
+                <button className="button"onClick={handleItalicClick}><FormatItalicRoundedIcon/></button>
+                <button className="button"onClick={handleUnderlineClick}><FormatUnderlinedRoundedIcon/></button>
+                <button className="button"onClick={handleStrikeClick}><StrikethroughSRoundedIcon/></button>
+                <button className="button"onClick={handleUpperClick}><AbcRoundedIcon/></button>
+                <button className="button"onClick={handleLowerClick}>aa</button>
+                <button className="button"onClick={handleClearClick}><BackspaceRoundedIcon/></button>
+                <button className='button'onClick={getText}><BeenhereRoundedIcon/></button>
+                <button className="button" onClick={handleColorClick}><FormatColorTextIcon/></button>
+                <hr className='line'/>
+                <button className="button"onClick={downloadFile}><DownloadRoundedIcon/></button>               
                 <input type="text" className="filename" placeholder='untitled'></input>
                 {/* <input type="color" className='btn1' onClick={handleColorClick}/>      */}
-                <button className='logout'onClick={handleLogout}><LogoutRoundedIcon/></button>
+                <button className='button'onClick={handleLogout}><LogoutRoundedIcon/></button>
       </nav>
     <div className='complete'>
 
     
-     <textarea name='textarea' className='container1' cols="300" rows="10" placeholder='Type some text here' value={text}onChange={(e)=>setText(e.target.value)}
+     <textarea name='textarea' className='container1' cols="116" rows="10" placeholder='Type some text here' value={text}onChange={(e)=>setText(e.target.value)}
          ></textarea>
          
         
@@ -189,7 +190,7 @@ const handleLowerClick = ()=>{
     </div>
     </div>
     </div>
-    </div> 
+     
     )
   }
   

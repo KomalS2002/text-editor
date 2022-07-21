@@ -6,14 +6,19 @@ const Login =(props)=>{
 
 
     return(
-        <section className="login">
+        < div className="background">
+        <div className="auth1">
+        <section className="auth">
         <div className="loginContainer">
-            <label>Email</label>
-            <input type="text" autoFocus required value={email} onChange = {e=> setEmail(e.target.value)}/>
-            <p className="errorMsg">{emailError}</p>
-            <label>Password</label>
-            <input type="text" autoFocus required value={password} onChange = {e=>setPassword(e.target.value)}/>
-            <p className="errorMsg">{passwordError}</p>
+            <div className="google"><button> 
+                Sign in with Google</button></div>
+            <div>OR</div>
+            <div className="google">
+            <input type="text" placeholder="email" autoFocus required value={email} onChange = {e=> setEmail(e.target.value)}/>
+            <p className="errorMsg">{emailError}</p></div>
+            <div className="google">
+            <input type="text" placeholder="password" autoFocus required value={password} onChange = {e=>setPassword(e.target.value)}/>
+            <p className="errorMsg">{passwordError}</p></div>
             <div className="buttonContainer">
                 {hasAccount ?
             (
@@ -29,6 +34,8 @@ const Login =(props)=>{
             )}</div>
         </div>
         </section>
+        <div ><img className="illustration" src="/images/people-working-together-online.png"  alt=""/></div>
+        </div></div>
     )
 }
 export default Login

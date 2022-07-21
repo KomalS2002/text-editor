@@ -4,54 +4,56 @@
   display: flex;
   background: linear-gradient(to bottom right,rgb(41, 177, 147),rgb(65, 65, 223));
 } */
+body::-webkit-scrollbar{
+  display: none;
+  border-radius: 15px;
 
+}
 .html .body #root{
   width: 100%;
-  /* height: 100vw; */
+  
   }
+
   .entity{
     display: flex;
     flex-wrap: wrap;
     height:100%;
     width: 100%;
     background: linear-gradient(to right,#A38ED2,#F9C1EB);
-    margin-left: 0px;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-top: 0;
     font-family: roboto;
    }
 
    .main{
-   
-    margin-left: 100px;
-    margin-top: 100px;
-    margin-right: 100px;
-    margin-bottom: 100px;
+    /* margin-left: 70px;
+    margin-top: 70px;
+    margin-right: 40px;
+    margin-bottom: 70px; */
+    margin: 70px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap ;
     overflow-x: hidden;
-    border-radius: 15px ;
-    border: 1px black;
+    justify-content: center;
+    border: 5px black;
+    border-radius: 15px;
+    height: 600px;
+    width: 1300px;
+    
   }
-  .main1{
-     border: 2px black;
-    display:flex;
-    width: 100%;
-    height: auto;
-   
-  }
+  
   .header{
     display: flex;
     flex-direction: row;
-    /* background-color: black; */
+    background-color: black;
+    height: 70px;
     opacity: 0.8;
     color: rgb(92, 29, 211);
     width: 100%;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 0;
     text-align: left;
+    border-bottom-left-radius: calc(-15px);
+    
     /* animation: animate 200s ease-in-out infinite;
     
    
@@ -68,43 +70,50 @@
       text-shadow: 0 0 10px rgb(216, 235, 46);
     }
   } */
-  #logo{
-    /* background-image: url(logobyme.png); */
-    width: 90px;
+  
+  .logo{
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    padding: 10px;
   }
   .complete{
     display: flex;
     flex-direction: column;
-    height: 100%;
+    width: 100%;
+    height: 1300px;
     margin-right: 0;
+    margin-left: 0;
     justify-content: center;
+    border: 3px black;
+    
     
   }
+
   .container1{
     
     /* float: left; */
     
-    width: 100%;
+    width: fit-content;
     background-color: whitesmoke;
     height: 50%;
-    overflow-x: hidden;
     opacity: 0.8;
-    margin-right: 5px;
-    box-shadow: 7px 7px 5px rgb(56,55,55);
     justify-content: center;
-    overflow-x: hidden;
+    border-top-right-radius: 15px;
+    border-bottom: 10px black;
   }
   
   
   
   .container2{
-    width: 100%;
+    width: 952px;
     background-color: whitesmoke;
-    height: 50%;
-    border: 1px solid rgb(106, 177, 141);
+    height:100%;
+    border-bottom-right-radius: 15px;
     opacity: 0.8;
-    box-shadow: 7px 7px 5px rgb(56, 55, 55);
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
   }
     
     
@@ -112,12 +121,11 @@
   .navbar{
     display: flex;
     flex-direction: column;
-    width:150px;
+    width:200px;
     height: 100%;
-    padding-left: 20px;
     background-color: whitesmoke;
     opacity: 0.8;
-    box-shadow: 7px 7px 5px rgb(56,55,55);
+    
    }
 
 .inputText{
@@ -125,124 +133,22 @@
   text-align: center;
 }
 
-.bold{
-  
-  
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
-  cursor: pointer;
-  color:black;
-  
-  
-}
-.italic{
-  
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
-  cursor: pointer;
-  color:black;
-  
- 
-}
-.underline{
+.button{
  
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+  cursor: pointer;
   border: none;
   color:black;
-  cursor: pointer;
-  }
-.strike{
+  background-color: whitesmoke;
   
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
-  cursor: pointer;
-  color:black;
-  
-  
+}
 
-}
-.uppercase{
-  
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
-  cursor: pointer;
-  color:black;
-  
-}
-.lowercase{
- 
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  cursor: pointer;
-  border: none;
-  color:black;
-  
-}
-.clear{
- 
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
-  cursor: pointer;
-  color:black;
-  
-}
-.select{
-  
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
-  cursor: pointer;
-  color:black;
- 
-}
-.color{
- 
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
-  color:black;
-  cursor: pointer;
-  
-}
-.download{
-  
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
-  cursor: pointer;
-  color:black;
-  
-
-}
 .filename{
   height: 30px;
-  width: 50px;
+  width: 70px;
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
@@ -252,21 +158,10 @@
   font-size: 15px;
   border: 1px black;
   cursor: pointer;
+  justify-content: center;
 
 }
-.logout{
-  
-  
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border: none;
- cursor: pointer;
-  color:black;
-  
-  
-}
+
 .label{
   margin-top: 5px;
   margin-bottom: 3px;
@@ -289,10 +184,10 @@ h3{
 h6{
   font-size: 16px;
 }
-#markdown{
+/* #markdown{
   border-radius: 5px solid rgb(106,177,141);
 
-}
+} */
 .texteditor{
   color: rgb(106, 9, 119);
 }
@@ -308,8 +203,8 @@ h6{
 }
 .info{
   color: black;
-  margin-top: 700px;
-  
+  /* margin-top: 700px; */
+  width: 20%;
 
 }
 .textarea{
@@ -320,9 +215,49 @@ h6{
 .App {
   text-align: center;
 }
-
-
-
-
+.background{
+  background: linear-gradient(to right,#A38ED2,#F9C1EB);
+  font-family: roboto;
+  
+}
+.auth1{
+  width: 1300px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0.7;
+  
+}
+.auth{
+  background-color: whitesmoke;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px;
+  padding: 20px;
+  margin-right: 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 2px solid black;
+  
+}
+.illustration{
+  border: 2px solid black;
+  border-left: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 500px;
+  height: 400px;
+  margin: 100px;
+  margin-left: 0;
+}
+.google{
+  background: linear-gradient(to right,#A38ED2,#F9C1EB);
+  border: 1px solid black;
+}
 
 
