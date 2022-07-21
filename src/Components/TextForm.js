@@ -154,7 +154,7 @@ const handleLowerClick = ()=>{
       <div>
         <div className='entity'>
           <div className='header'>
-            <div ><img className='logo' src='/images/logobyme.png' alt=''/></div>
+            <div ><img className='logo' src='/images/text-tool.png' alt=''/></div>
     <h1 className='header1'>Textoria</h1></div>
           
           <div className='main'>
