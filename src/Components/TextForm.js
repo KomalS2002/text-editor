@@ -135,13 +135,13 @@ const handleLowerClick = ()=>{
     const blob = new Blob([content], {type:'plain/txt'});
     const fileURL = URL.createObjectURL(blob);
     element.setAttribute('href',fileURL);
-    element.setAttribute('btn10',filename);
+    element.setAttribute('download',filename);
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
   }
   window.onload = ()=>{
-    document.getElementsByClassName(".btn10").addEventListener('click', e=>{
+    document.getElementsByClassName(".button").addEventListener('click', e=>{
       const filename = document.getElementsByClassName(".filename").value;
       const content = document.getElementsByClassName(".output1").value;
       if(filename && content){
@@ -154,30 +154,30 @@ const handleLowerClick = ()=>{
       <div>
         <div className='entity'>
           <div className='header'>
-            <div ><img className='logo' src='/images/text-tool.png' alt=''/></div>
-    <h1 className='header1'>Textoria</h1></div>
+            <img className='logo' src='/images/text-editor.png' alt=''/>
+    <div className='header1'>Textoria</div></div>
           
           <div className='main'>
       <nav className="navbar">
-                <button className="button"onClick={handleBoldClick}><FormatBoldRoundedIcon/></button>
-                <button className="button"onClick={handleItalicClick}><FormatItalicRoundedIcon/></button>
-                <button className="button"onClick={handleUnderlineClick}><FormatUnderlinedRoundedIcon/></button>
-                <button className="button"onClick={handleStrikeClick}><StrikethroughSRoundedIcon/></button>
-                <button className="button"onClick={handleUpperClick}><AbcRoundedIcon/></button>
-                <button className="button"onClick={handleLowerClick}>aa</button>
-                <button className="button"onClick={handleClearClick}><BackspaceRoundedIcon/></button>
-                <button className='button'onClick={getText}><BeenhereRoundedIcon/></button>
-                <button className="button" onClick={handleColorClick}><FormatColorTextIcon/></button>
+               <div className='inbtn'> <button className="button"onClick={handleBoldClick}><FormatBoldRoundedIcon/></button>
+                <button className="button"onClick={handleItalicClick}><FormatItalicRoundedIcon/></button></div>
+               <div className='inbtn'> <button className="button"onClick={handleUnderlineClick}><FormatUnderlinedRoundedIcon/></button>
+                <button className="button"onClick={handleStrikeClick}><StrikethroughSRoundedIcon/></button></div>
+                <div className='inbtn'><button className="button"onClick={handleUpperClick}><AbcRoundedIcon/></button>
+                <button className="button"onClick={handleLowerClick}>aa</button></div>
+                <div className='inbtn'> <button className="button"onClick={handleClearClick}><BackspaceRoundedIcon/></button>
+                <button className='button'onClick={getText}><BeenhereRoundedIcon/></button></div>
+                <div className='inbtn'><button className="button" onClick={handleColorClick}><FormatColorTextIcon/></button></div>
                 <hr className='line'/>
-                <button className="button"onClick={downloadFile}><DownloadRoundedIcon/></button>               
-                <input type="text" className="filename" placeholder='untitled'></input>
+                <div className='save'><button className="download"onClick={downloadFile}><DownloadRoundedIcon/></button>               
+                <input type="text" className="filename" placeholder='untitled'></input></div>
                 {/* <input type="color" className='btn1' onClick={handleColorClick}/>      */}
-                <button className='button'onClick={handleLogout}><LogoutRoundedIcon/></button>
+                <button className='button1'onClick={handleLogout}><LogoutRoundedIcon/></button>
       </nav>
     <div className='complete'>
 
     
-     <textarea name='textarea' className='container1' cols="116" rows="10" placeholder='Type some text here' value={text}onChange={(e)=>setText(e.target.value)}
+     <textarea name='textarea' className='container1'  placeholder='Type some text here' value={text}onChange={(e)=>setText(e.target.value)}
          ></textarea>
          
         

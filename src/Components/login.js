@@ -2,18 +2,18 @@ import React from "react";
 //import { useHistory } from "react-router-dom";
 const Login =(props)=>{
     const{email, setEmail, password, setPassword, handleLogin, handleSignup, hasAccount, setHasAccount,
-         emailError, passwordError,}= props;
+         emailError, passwordError}= props;
 
 
     return(
-        < div className="background"><img src="/images/background.png" alt=""/>
+        < div className="background">
         <div className="auth1">
         <section className="auth">
             <h1 className="line1">Get Started!</h1>
         <div className="loginContainer">
-            <div ><button className="google"> 
+            <div ><button className="google" > 
                 Sign in with Google</button></div>
-            <h4 className="line2">OR</h4>
+            <div className="line2">OR</div>
             <div >
             <input className="login" type="text" placeholder="email" autoFocus required value={email} onChange = {e=> setEmail(e.target.value)}/>
             <p className="errorMsg">{emailError}</p></div>
