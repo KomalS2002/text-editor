@@ -4,14 +4,14 @@
   display: flex;
   background: linear-gradient(to bottom right,rgb(41, 177, 147),rgb(65, 65, 223));
 } */
-/* body::-webkit-scrollbar{
+body::-webkit-scrollbar{
   display: none;
   
 
-} */
+}
 .html .body #root{
   width: 100%;
-  
+  height: 100%;
   }
 
   .entity{
@@ -76,7 +76,7 @@
   .complete{
     display: flex;
     flex-direction: row;
-    width: 1286px;
+    width: 100%;
     height: 1300px;
     justify-content: center;
     }
@@ -104,8 +104,12 @@
   #markdown{
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
     overflow-y: hidden;
-    margin: 0;
+    padding: 0;
+    border-right: 2px solid grey;
+    outline: none;
+    margin-right: 3px;
   }
   
   
@@ -121,13 +125,13 @@
     flex-direction: column; */
     overflow: hidden;
   }
-  .preview{
+  /* .preview{
     border-bottom: 2px solid gray;
-    /* border-left: 1px solid grey; */
+    
     margin: 0;
     width: 100%;
     height: 40px;
-  } 
+  }  */
   .output{
     color: black;
     text-align: center;
@@ -140,7 +144,26 @@
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
-    margin-left: 2px;
+    /* margin-left: 2px; */
+    padding-left: 5px;
+    font-weight: 700;
+  }
+   .button1:hover{
+    background-color: #03888f;
+   }
+  .button1{
+    height: 30px;
+    margin-left: 1000px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 60px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    color:black;
+    background-color: #acdcdc;
+    border-radius: 5px;
+    
   }
 
   /* .navbar{
@@ -249,10 +272,13 @@ h6{
 
 
 .info{
+  width: 1286px;
   color: black;
-  /* margin-top: 700px; */
+  background-color: purple;
+  border-top: 1.5px solid grey;
   width: 20%;
-  font-family: 'Merienda';
+  margin-top: 0;
+  justify-content: end;
 }
 .textarea{
   width: 100%;

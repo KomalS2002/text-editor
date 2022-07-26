@@ -8,9 +8,16 @@ import { Remarkable } from 'remarkable';
 import fire from './Components/fire';
 import Login from './Components/login';
 import TextForm from './Components/TextForm';
-//import Image from './Components/logobyme.png';
-
+import styled from 'styled-components';
+import Navbar from './Components/Navbar';
 //import { useHistory } from "react-router-dom";
+const Appcontainer= styled.div`
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+`
 
 const md= new Remarkable ()
 export default function App() { 
@@ -86,8 +93,9 @@ useEffect(()=>{
 
 
   return (
-    <>
     
+    <Appcontainer>
+      
     {
       user? 
       (<TextForm handleLogout={handleLogout}/>):
@@ -104,9 +112,9 @@ useEffect(()=>{
         
     }
     
-
+    </Appcontainer>
     
-    </>
+    
   );
 }
 

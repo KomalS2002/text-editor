@@ -7,12 +7,86 @@
   // import FormatUnderlinedRoundedIcon from '@mui/icons-material/FormatUnderlinedRounded';
   // import StrikethroughSRoundedIcon from '@mui/icons-material/StrikethroughSRounded';
   // import FormatColorTextIcon from '@mui/icons-material/FormatColorText';
-  // import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
+  //import DownloadRoundedIcon from '@mui/icons-material/DownloadRounded';
   // import AbcRoundedIcon from '@mui/icons-material/AbcRounded';
   // import BackspaceRoundedIcon from '@mui/icons-material/BackspaceRounded';
   // import BeenhereRoundedIcon from '@mui/icons-material/BeenhereRounded';
-   import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+   //import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+   import styled from 'styled-components';
+   import Navigation from './Navigation';
+   import MobileNavigation from './MobileNavigation';
+   import NavLinks from './NavLinks'
+   //import Navbar from './Navbar';
+
+
+   const Entity = styled.div`
+  width: 100%;
+  height: 100%;
+  `
+  const Complete = styled.div`
+  display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 1300px;
+    justify-content: center;
+  `
+
+  const Textarea = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  resize: none;
+ 
+  `
+  const Title = styled.div`
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 0;
+  justify-content:center;
+  background-color: #a334cc;
+  height: 2em
+  color: fff;
+  `
+  const Title1 = styled.div`
+  height: 40px;
+  width: 100%;
+  font-size: 22px;
+  font-weight: 600;
+  border: 1.5px solid grey;
+  border-bottom: 0;
+  margin-bottom: 1em:;
+  background-color: #d9eeef;
+  `
+  const Preview = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  resize: none;
+  flex-direction: column;
   
+  `
+  const Title2 = styled.div`
+  height:40px;
+  width:100%;
+  font-size:22px;
+  font-weight:600;
+  margin-bottom: 1em;
+  border: 1.5px solid grey;
+  border-left: 2px solid grey;
+  background-color: #d9eeef;
+
+  `
+  const Info = styled.div`
+  width: 100%;
+  color: black;
+  height: 2.5em;
+  font-weight: 700;
+  padding: 5px;
+  background-color: #acdcdc;
+  
+  
+  `
 
   const md= new Remarkable ()
   function TextForm(props) {
@@ -142,47 +216,42 @@
   //     }
   //   })
   // }
+ 
   
     return (
-      <div>
-        <div className='entity'>
+      
+        <Entity>
+        <Title>Markdown Editor
+        <button className='button1'onClick={handleLogout}>Logout</button>
+        <div className='document'>Document</div>
+        <div className='save'>Save</div>
+        <NavLinks/>
+        <MobileNavigation/>
+        </Title>
           
-          <div className='header'>
-            <img className='logo' src='/images/text (1).png' alt=''/>
-    <div className='header1'>Text Editor</div>
-    <button className='button1'onClick={handleLogout}><LogoutRoundedIcon/></button></div>
-    <p className='info'>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</p>
-      {/* <nav className="navbar">
-               <div className='inbtn'> <button className="button"onClick={handleBoldClick}><FormatBoldRoundedIcon/></button>
-                <button className="button"onClick={handleItalicClick}><FormatItalicRoundedIcon/></button></div>
-               <div className='inbtn'> <button className="button"onClick={handleUnderlineClick}><FormatUnderlinedRoundedIcon/></button>
-                <button className="button"onClick={handleStrikeClick}><StrikethroughSRoundedIcon/></button></div>
-                <div className='inbtn'><button className="button"onClick={handleUpperClick}><AbcRoundedIcon/></button>
-                <button className="button"onClick={handleLowerClick}>aa</button></div>
-                <div className='inbtn'> <button className="button"onClick={handleClearClick}><BackspaceRoundedIcon/></button>
-                <button className='button'onClick={getText}><BeenhereRoundedIcon/></button></div>
-                <div className='inbtn'><button className="button" onClick={handleColorClick}><FormatColorTextIcon/></button></div>
-                <hr className='line'/>
-                <div className='save'><button className="download"onClick={downloadFile}><DownloadRoundedIcon/></button>               
-                <input type="text" className="filename" placeholder='untitled'></input></div>
+          
+    <Info>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</Info>
+      
+      {/* <div className='save'><button className="download"onClick={downloadFile}><DownloadRoundedIcon/></button>               
+                <input type="text" className="filename" placeholder='untitled'></input></div> */}
                 
-      </nav> */}
-    <div className='complete'>
-    <div className='container1'>
-    <div className='markdown-header'>markdown</div>
+    <Complete>
+    <Textarea>
+    <Title1>Markdown Text</Title1>
      <textarea name='textarea' label='markdown' id='markdown'  placeholder='Type some text here' value={text}onChange={(e)=>setText(e.target.value)}
          ></textarea>
-         </div>
+         </Textarea>
         
-         <div className='container2'>        
-         <div className='preview'>preview </div>
+        <Preview>        
+         <Title2>Preview</Title2>
        <div className="output1" dangerouslySetInnerHTML={{__html:md.render(text)}}></div>
        
-       </div>
+       </Preview>
+       </Complete>
    
-    </div>
-    </div>
-    </div>
+       
+       </Entity>
+   
      
     )
   }
