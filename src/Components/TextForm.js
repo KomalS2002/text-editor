@@ -16,7 +16,7 @@
    import Navigation from './Navigation';
    import MobileNavigation from './MobileNavigation';
    import NavLinks from './NavLinks'
-   //import Navbar from './Navbar';
+   import Navbar from './Navbar';
 
 
    const Entity = styled.div`
@@ -56,7 +56,7 @@
   border: 1.5px solid grey;
   border-bottom: 0;
   margin-bottom: 1em:;
-  background-color: #d9eeef;
+  background-color: #fff;
   `
   const Preview = styled.div`
   width: 100%;
@@ -74,7 +74,7 @@
   margin-bottom: 1em;
   border: 1.5px solid grey;
   border-left: 2px solid grey;
-  background-color: #d9eeef;
+  background-color: #fff;
 
   `
   const Info = styled.div`
@@ -83,7 +83,7 @@
   height: 2.5em;
   font-weight: 700;
   padding: 5px;
-  background-color: #acdcdc;
+  background-color: #fff;
   
   
   `
@@ -220,14 +220,9 @@
   
     return (
       
-        <Entity>
-        <Title>Markdown Editor
-        <button className='button1'onClick={handleLogout}>Logout</button>
-        <div className='document'>Document</div>
-        <div className='save'>Save</div>
-        <NavLinks/>
-        <MobileNavigation/>
-        </Title>
+        <>
+                  
+        <Navbar/>
           
           
     <Info>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</Info>
@@ -249,8 +244,8 @@
        </Preview>
        </Complete>
    
-       
-       </Entity>
+       <button className='button1'onClick={handleLogout}>Logout</button>
+       </>
    
      
     )

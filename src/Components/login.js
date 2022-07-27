@@ -35,8 +35,9 @@ const Login =(props)=>{
             )}</div>
         </div>
         </section>
-        <div ><img className="illustration" src="/images/juicy-girl-is-working-on-laptop-at-a-remote-job.png"  alt=""/></div>
-        </div></div>
+        {/* <div ><img className="illustration" src="/images/juicy-girl-is-working-on-laptop-at-a-remote-job.png"  alt=""/></div> */}
+        </div>
+        </div>
     )
 }
 export default Login
