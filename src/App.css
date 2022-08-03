@@ -24,6 +24,21 @@ body::-webkit-scrollbar{
     
     
    }
+.title{
+  font-size: 25px;
+  width: 1286px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin:0;
+  display: flex;
+  flex-direction:row;
+  padding: 15px;
+  justify-content:space-between;
+  background-color: #a334cc;
+  height: 2em;
+  color: fff;
+}
+
 
    .main{
     /* margin-left: 70px;
@@ -79,47 +94,70 @@ body::-webkit-scrollbar{
     width: 100%;
     height: 1300px;
     justify-content: center;
+    border-top: 1.5px solid grey;
     }
 
   .container1{
     
     /* float: left; */
     padding: 0;
-    width: 642px;
+    width: 50%;
     background-color: white;
     height: 100%;
     flex-wrap: wrap;
-    /* display: flex;
-    flex-direction: column; */
-    border: 2px solid grey;
-   
-    
-  }
-  .markdown-header{
+    border-right: 1px solid grey;
+   }
+
+  .markdownheader{
     height: 40px;
-    width: 645px;
-    border-bottom: 2px solid gray;
-    /* border-right: 1px solid grey; */
+    width: 100%;
+    border-bottom: 1.5px solid gray;
+    padding: 0px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600;
+    justify-content: center;
+    border-bottom: 0;
+    margin-bottom: 0;
+    background-color: #fff;
+    /* border-right: 1.5px solid grey; */
+    
   }
   #markdown{
     height: 100%;
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
-    padding: 0;
-    border-right: 2px solid grey;
     outline: none;
-    margin-right: 3px;
+    padding: 0;
+    /* border-right: 1.5px solid grey; */
+    outline: none;
+    /* margin-right: 5px; */
+    padding-top: 3px;
+    resize: none;
+    
   }
-  
+  .previewheader{
+    height: 40px;
+    width: 100%;
+    border-bottom: 1.5px solid gray;
+    padding: 0px;
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600;
+    justify-content: center;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-left: 0px solid grey;
+  }
   
   .container2{
     margin: 0;
-    margin-left: 2px;
-    width: 642px;
+    margin-left: 0px;
+    width: 50%;
     background-color:white;
     height:100%;
-    border: 2px solid grey;
+    border-left: 2px solid grey;
     flex-wrap: wrap;
     /* display: flex;
     flex-direction: column; */
@@ -147,6 +185,7 @@ body::-webkit-scrollbar{
     /* margin-left: 2px; */
     padding-left: 5px;
     font-weight: 700;
+    padding-top: 0;
   }
    .button1:hover{
     background-color: #03888f;
@@ -187,22 +226,24 @@ body::-webkit-scrollbar{
       display: none;
     }
     .MobileNavigation{
+     
       display: flex;
       flex-direction: row;
-      background-color: blue;
+      /* background-color: blue; */
       align-items: center;
     }
     .hamburger{
+      top: 0%;
       position: absolute;
       right: 0;
       color: #77CCFF;
+      cursor: pointer;
     }
-    .Navbar{
+    .Navbar ul{
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 80px;
-      right: 0;
+      right: 3%;
       width: 100%;
 
     }
@@ -328,10 +369,12 @@ h6{
   text-align: center;
 }
 .background{
-  background: white;
+  background: #a334cc;
+  /* background-image: url(pablita-846.png);
+  background-repeat: no-repeat;
+  background-position: center; */
   
-  
-  height: 668px;
+  height: 100%;
   
   
 }
@@ -350,35 +393,41 @@ h6{
 }
 .auth{
   
-  background-color: #a334cc;
+  background-color: #fff;
   height: 460px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 50px;
+  /* padding-left: 50px;
   padding-right: 50px;
-  padding-top: 10px;
+  padding-top: 10px; */
   width: 450px;
-  padding: 20px;
+  padding: 0px;
   margin-top: 100px;
   margin-bottom: 100px;
-  margin-right: 0;
-  border: 2px solid #77CCFF;
-  opacity: 0.7;
+  margin-right: 100px;
+  border-left: 1px solid white;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  
   
   
 }
 .illustration{
-  border: 2px solid black;
+  
   border-left: none;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  width: 450px;
-  height: 400px;
+ 
+  width: 510px;
+  height: 460px;
   margin: 100px;
-  margin-left: 0;
-  box-shadow: 5px 5px 5px gray;
+  margin-right: 0;
+  border-right: 1px solid white;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+ 
 }
 .google{
   background: #77CCFF;
@@ -397,7 +446,9 @@ h6{
   height: 50px;
   margin-top: 0;
   margin-bottom: 5;
-  margin-left: 110px;
+  margin-left: 130px;
+  
+  color: #a334cc;
   
 }
 
@@ -415,10 +466,10 @@ h6{
   margin-bottom: 0;
   margin-left: 95px;
   margin-right: 95px;
-  color: black;
+  color: #77CCFF;
 }
 .login{
-  background: #77CCFF;
+  background: white;
   border: 1px solid #a334cc;
   height: 30px;
   width: 300px;
@@ -428,11 +479,11 @@ h6{
   margin-top: 0;
   outline: #a334cc;
   font-weight: bold;
-  color: black;
+  color:black;
   
 }
 .signin{
-  background: #77CCFF;
+  background: #a334cc;
   border: 1px solid #a334cc;
   height: 30px;
   width: 300px;
@@ -444,7 +495,7 @@ h6{
   
 }
 .signup{
-  background: #77CCFF;
+  background: #a334cc;
   border: 1px solid #a334cc;
   height: 30px;
   width: 300px;

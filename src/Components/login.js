@@ -7,7 +7,9 @@ const Login =(props)=>{
 
     return(
         < div className="background">
+            
         <div className="auth1">
+        <img className="illustration" src="./images/pablita-846.png"  alt=""/>
         <section className="auth">
             <h1 className="line1">Get Started!</h1>
         <div className="loginContainer">
@@ -18,7 +20,7 @@ const Login =(props)=>{
             <input className="login" type="text" placeholder="email" autoFocus required value={email} onChange = {e=> setEmail(e.target.value)}/>
             <p className="errorMsg">{emailError}</p></div>
             <div >
-            <input className="login" type="text" placeholder="password" autoFocus required value={password} onChange = {e=>setPassword(e.target.value)}/>
+            <input className="login" type="password" placeholder="password" autoFocus required value={password} onChange = {e=>setPassword(e.target.value)}/>
             <p className="errorMsg">{passwordError}</p></div>
             <div className="buttonContainer">
                 {hasAccount ?
@@ -35,7 +37,7 @@ const Login =(props)=>{
             )}</div>
         </div>
         </section>
-        {/* <div ><img className="illustration" src="/images/juicy-girl-is-working-on-laptop-at-a-remote-job.png"  alt=""/></div> */}
+        
         </div>
         </div>
     )

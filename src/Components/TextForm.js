@@ -13,70 +13,17 @@
   // import BeenhereRoundedIcon from '@mui/icons-material/BeenhereRounded';
    //import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
    import styled from 'styled-components';
-   import Navigation from './Navigation';
-   import MobileNavigation from './MobileNavigation';
-   import NavLinks from './NavLinks'
-   import Navbar from './Navbar';
+   //import Navigation from './Navigation';
+   //import MobileNavigation from './MobileNavigation';
+   //import NavLinks from './NavLinks'
+   //import Navbar from './Navbar';
 
 
-   const Entity = styled.div`
-  width: 100%;
-  height: 100%;
-  `
-  const Complete = styled.div`
-  display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 1300px;
-    justify-content: center;
-  `
-
-  const Textarea = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  resize: none;
- 
-  `
-  const Title = styled.div`
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 0;
-  justify-content:center;
-  background-color: #a334cc;
-  height: 2em
-  color: fff;
-  `
-  const Title1 = styled.div`
-  height: 40px;
-  width: 100%;
-  font-size: 22px;
-  font-weight: 600;
-  border: 1.5px solid grey;
-  border-bottom: 0;
-  margin-bottom: 1em:;
-  background-color: #fff;
-  `
-  const Preview = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  resize: none;
-  flex-direction: column;
+   
   
-  `
-  const Title2 = styled.div`
-  height:40px;
-  width:100%;
-  font-size:22px;
-  font-weight:600;
-  margin-bottom: 1em;
-  border: 1.5px solid grey;
-  border-left: 2px solid grey;
-  background-color: #fff;
 
-  `
+ 
+  
   const Info = styled.div`
   width: 100%;
   color: black;
@@ -221,8 +168,8 @@
     return (
       
         <>
-                  
-        <Navbar/>
+        <div className='entity'>     
+        
           
           
     <Info>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</Info>
@@ -230,21 +177,22 @@
       {/* <div className='save'><button className="download"onClick={downloadFile}><DownloadRoundedIcon/></button>               
                 <input type="text" className="filename" placeholder='untitled'></input></div> */}
                 
-    <Complete>
-    <Textarea>
-    <Title1>Markdown Text</Title1>
+    <div className='complete'>
+    <div className='container1'>
+    <div className='markdownheader'>Markdown Text</div>
      <textarea name='textarea' label='markdown' id='markdown'  placeholder='Type some text here' value={text}onChange={(e)=>setText(e.target.value)}
          ></textarea>
-         </Textarea>
+         </div>
         
-        <Preview>        
-         <Title2>Preview</Title2>
+        <div className='container2'>        
+         <div className='previewheader'>Preview</div>
        <div className="output1" dangerouslySetInnerHTML={{__html:md.render(text)}}></div>
        
-       </Preview>
-       </Complete>
+       </div>
+       </div>
    
        <button className='button1'onClick={handleLogout}>Logout</button>
+       </div> 
        </>
    
      
