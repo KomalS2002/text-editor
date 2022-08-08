@@ -1,5 +1,5 @@
   import React from 'react'
-  import  {useState} from 'react';
+  import  {useState,useEffect} from 'react';
   import { Remarkable } from 'remarkable';
   // import {useHistory } from "react-router-dom";
   // import FormatBoldRoundedIcon from '@mui/icons-material/FormatBoldRounded';
@@ -17,7 +17,8 @@
    //import MobileNavigation from './MobileNavigation';
    //import NavLinks from './NavLinks'
    //import Navbar from './Navbar';
-
+   //import "firebase/storage"
+   
 
    
   
@@ -39,6 +40,24 @@
   function TextForm(props) {
     const{handleLogout}=props;
     const [text, setText] = useState("");
+    //const {inputText} = text;
+    useEffect(()=>{
+     const formData = localStorage.getItem("my-form-value1");
+     if (formData)
+     {setText(JSON.parse(formData));}
+    },[]);
+    useEffect(() => {
+      localStorage.setItem("my-form-value1",JSON.stringify(text));
+    });
+  
+
+
+    
+    // const save = (e) => {
+    //   e.preventdefault();
+
+    //   db.collection("documents").doc()
+    // }
 //    const [isBold, setIsBold] = useState(true);
 
 //   const handleBoldClick = ()=>{
@@ -170,7 +189,7 @@
         <>
         <div className='entity'>     
         
-          
+        
           
     <Info>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</Info>
       

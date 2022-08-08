@@ -9,7 +9,7 @@ const Login =(props)=>{
         < div className="background">
             
         <div className="auth1">
-        <img className="illustration" src="./images/pablita-846.png"  alt=""/>
+        <img className="illustration" src="./images/grapy-programmer-coding-with-two-monitovrs.png"  alt=""/>
         <section className="auth">
             <h1 className="line1">Get Started!</h1>
         <div className="loginContainer">

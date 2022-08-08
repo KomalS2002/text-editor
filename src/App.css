@@ -101,6 +101,7 @@ body::-webkit-scrollbar{
     
     /* float: left; */
     padding: 0;
+    padding-left: 4px;
     width: 50%;
     background-color: white;
     height: 100%;
@@ -229,7 +230,7 @@ body::-webkit-scrollbar{
      
       display: flex;
       flex-direction: row;
-      /* background-color: blue; */
+      
       align-items: center;
     }
     .hamburger{
@@ -369,10 +370,8 @@ h6{
   text-align: center;
 }
 .background{
-  background: #a334cc;
-  /* background-image: url(pablita-846.png);
-  background-repeat: no-repeat;
-  background-position: center; */
+  /* background: #a334cc; */
+  background-color: whitesmoke;
   
   height: 100%;
   
@@ -388,8 +387,9 @@ h6{
   margin: 0;
   padding: 100px;
   padding-top: 0;
-  
+  resize: none;
   /* padding-right: 100px; */
+ 
 }
 .auth{
   
@@ -407,27 +407,30 @@ h6{
   margin-top: 100px;
   margin-bottom: 100px;
   margin-right: 100px;
-  border-left: 1px solid white;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
-  
-  
+  border-left: 1px solid #a334cc;
+  border-top: 2px solid #a334cc;
+  border-bottom: 2px solid #a334cc;
+  border-right: 2px solid #a334cc;
+  border-radius: 15px ;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  box-shadow: 0 7px 9px rgb(172, 171, 171);
   
 }
 .illustration{
-  
-  border-left: none;
- 
-  width: 510px;
+  background-color: #d393eb;
+  width: 450px;
   height: 460px;
   margin: 100px;
   margin-right: 0;
-  border-right: 1px solid white;
-  border-left: 2px solid white;
-  border-top: 2px solid white;
-  border-bottom: 2px solid white;
- 
+  border-right: 1px solid #a334cc;
+  border-left: 2px solid #a334cc;
+  border-top: 2px solid #a334cc;
+  border-bottom: 2px solid #a334cc;
+  padding-right: 10px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  
 }
 .google{
   background: #77CCFF;
@@ -462,15 +465,15 @@ h6{
 .line3{
   justify-content: center;
   font-weight: bold;
-  margin-top: 0;
+  margin-top: 5px;
   margin-bottom: 0;
   margin-left: 95px;
   margin-right: 95px;
-  color: #77CCFF;
+  color: black;
 }
 .login{
-  background: white;
-  border: 1px solid #a334cc;
+  background: whitesmoke;
+  border: 2px solid #a334cc;
   height: 30px;
   width: 300px;
   opacity: 1;
@@ -480,32 +483,52 @@ h6{
   outline: #a334cc;
   font-weight: bold;
   color:black;
+  border-radius: 10px;
   
 }
 .signin{
   background: #a334cc;
   border: 1px solid #a334cc;
-  height: 30px;
+  height: 35px;
   width: 300px;
   color: white;
-  /* justify-content: flex-start; */
-  margin-left: 75px;
+  font-size: 16px;
+  margin-left: 78px;
   margin-right: 75px;
-  
+  border-radius: 10px;
   
 }
 .signup{
   background: #a334cc;
   border: 1px solid #a334cc;
-  height: 30px;
+  height: 35px;
   width: 300px;
   color: white;
-  /* justify-content: flex-start; */
-  margin-left: 75px;
+  font-size: 16px;
+  margin-left: 78px;
   margin-right: 75px;
-  
+  border-radius: 10px;
   
 }
 .span{
   color: #a334cc;
+  font-weight: bolder;
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media (max-width:990px){
+  .auth1{
+    display: flex;
+    flex-direction: column;
+  }
+  .auth{
+   display: block;
+   margin-top: 0;
+   margin-left: 100px;
+  }
+  .illustration{
+    display: block;
+    margin-bottom: 0;
+    margin-left: 100px;
+  }
 }

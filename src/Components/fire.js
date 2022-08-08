@@ -1,5 +1,7 @@
 //import firebase from 'firebase';
-
+//import {Getfirestore} from 'firebase/firestore';
+//import {GetStorage} from 'firebase/storage';
+//import "firebase/storage"
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
@@ -15,6 +17,8 @@ var firebaseConfig = {
     measurementId: "G-YL168TX762"
   };
   const fire = firebase.initializeApp(firebaseConfig);
+  //const db = fire.firestore();
+  
   export default fire;
 
   // export const provider = new GoogleAuthProvider()
