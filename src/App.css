@@ -45,23 +45,23 @@ body::-webkit-scrollbar{
     margin-top: 70px;
     margin-right: 40px;
     margin-bottom: 70px; */
-    margin: 70px;
-    margin-top: 10px;
+   
     display: flex;
     flex-direction: column;
     flex-wrap: wrap ;
-    
+    width: 100%;
     justify-content: center;
-    background-color: white;
-    border-radius: 15px;
+    background-color: #d393eb;
+    /* border-radius: 15px;
     
     width: 1286px;
-    box-shadow: 4px 4px 4px grey;
+    box-shadow: 4px 4px 4px grey; */
     
   }
   
   .header{
     display: flex;
+    font-family: roboto;
     flex-direction: row;
     height: 60px;
     opacity: 0.8;
@@ -69,7 +69,13 @@ body::-webkit-scrollbar{
     margin-top: 0;
     margin-bottom: 0;
     text-align: left;
-    background-color: rgb(137, 27, 211);
+    background-color: #a334cc;
+    color: white;
+    font-size: 32px;
+    justify-content: center;
+    padding-top: 5px;
+    font-weight: 900;
+    border-bottom: 2px solid white;
   }
   
   .logo{
@@ -91,49 +97,57 @@ body::-webkit-scrollbar{
   .complete{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    margin: 50px;
+    /* width: 100%; */
     height: 1300px;
     justify-content: center;
-    border-top: 1.5px solid grey;
+    
+    background-color: #d393eb;
     }
 
   .container1{
     
     /* float: left; */
     padding: 0;
-    padding-left: 4px;
     width: 50%;
     background-color: white;
     height: 100%;
     flex-wrap: wrap;
-    border-right: 1px solid grey;
+    margin-right: 10px;
+    /* border-right: 1px solid grey; */
+    border: 2px solid #a334cc;
+    box-shadow: 7px 7px 9px grey;
+    
    }
 
-  .markdownheader{
+  .complete .container1 .markdownheader{
     height: 40px;
     width: 100%;
     border-bottom: 1.5px solid gray;
+    border-top: 0;
     padding: 0px;
     width: 100%;
     font-size: 22px;
     font-weight: 600;
-    justify-content: center;
+    border-radius: 15px;
     border-bottom: 0;
     margin-bottom: 0;
     background-color: #fff;
     /* border-right: 1.5px solid grey; */
+    border-top-left-radius: 15px;
     
   }
   #markdown{
-    height: 100%;
-    width: 100%;
+    height: 1254px;
+    width: 596px;
     overflow-x: hidden;
     overflow-y: hidden;
     outline: none;
-    padding: 0;
-    /* border-right: 1.5px solid grey; */
+    padding-left: 2px;
+    border-right: 2px solid #a334cc;
+    border-bottom: 2px solid #a334cc;
     outline: none;
-    /* margin-right: 5px; */
+    margin-right: 15px;
     padding-top: 3px;
     resize: none;
     
@@ -154,15 +168,17 @@ body::-webkit-scrollbar{
   
   .container2{
     margin: 0;
-    margin-left: 0px;
+    margin-left: 10px;
     width: 50%;
     background-color:white;
     height:100%;
-    border-left: 2px solid grey;
+    /* border-left: 2px solid grey; */
     flex-wrap: wrap;
     /* display: flex;
     flex-direction: column; */
     overflow: hidden;
+    border: 2px solid #a334cc;
+    box-shadow: 7px 7px 9px grey;
   }
   /* .preview{
     border-bottom: 2px solid gray;
@@ -193,9 +209,9 @@ body::-webkit-scrollbar{
    }
   .button1{
     height: 30px;
-    margin-left: 1000px;
+    margin-left: 10000px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     width: 60px;
     cursor: pointer;
     border: none;
@@ -286,7 +302,7 @@ body::-webkit-scrollbar{
 }
 .button1{
  
-  margin-left: 5px;
+  margin-left: 1000px;
   margin-right: 5px;
   margin-top: 20px;
   cursor: pointer;
@@ -430,7 +446,7 @@ h6{
   padding-right: 10px;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
-  
+  box-shadow: 0 7px 0px rgb(172, 171, 171);
 }
 .google{
   background: #77CCFF;

@@ -31,7 +31,7 @@
   height: 2.5em;
   font-weight: 700;
   padding: 5px;
-  background-color: #fff;
+  background-color: #d393eb;
   
   
   `
@@ -40,7 +40,8 @@
   function TextForm(props) {
     const{handleLogout}=props;
     const [text, setText] = useState("");
-    //const {inputText} = text;
+    //const [inputText,setInputText]= useState({input:""});
+    //const {input} = text;
     useEffect(()=>{
      const formData = localStorage.getItem("my-form-value1");
      if (formData)
@@ -190,17 +191,22 @@
         <div className='entity'>     
         
         
-          
+    <div className='header'>Markdown Editor <button className='button1'onClick={handleLogout}>Logout</button></div>   
     <Info>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</Info>
       
       {/* <div className='save'><button className="download"onClick={downloadFile}><DownloadRoundedIcon/></button>               
                 <input type="text" className="filename" placeholder='untitled'></input></div> */}
-                
+     <div className='main'>           
     <div className='complete'>
     <div className='container1'>
     <div className='markdownheader'>Markdown Text</div>
-     <textarea name='textarea' label='markdown' id='markdown'  placeholder='Type some text here' value={text}onChange={(e)=>setText(e.target.value)}
-         ></textarea>
+     <textarea name='textarea' 
+               label='markdown' 
+               id='markdown'  
+               placeholder='Type some text here' 
+               value={text} 
+               onChange={(e)=>setText(e.target.value)}
+    ></textarea>
          </div>
         
         <div className='container2'>        
@@ -210,8 +216,9 @@
        </div>
        </div>
    
-       <button className='button1'onClick={handleLogout}>Logout</button>
+       
        </div> 
+       </div>
        </>
    
      
