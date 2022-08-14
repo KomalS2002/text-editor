@@ -1,6 +1,8 @@
   import React from 'react'
   import  {useState,useEffect} from 'react';
   import { Remarkable } from 'remarkable';
+  import fire from './fire';
+  //import{uid} from 'uid';
   // import {useHistory } from "react-router-dom";
   // import FormatBoldRoundedIcon from '@mui/icons-material/FormatBoldRounded';
   // import FormatItalicRoundedIcon from '@mui/icons-material/FormatItalicRounded';
@@ -18,7 +20,7 @@
    //import NavLinks from './NavLinks'
    //import Navbar from './Navbar';
    //import "firebase/storage"
-   
+   import Upperbar from './Upperbar';
 
    
   
@@ -28,18 +30,43 @@
   const Info = styled.div`
   width: 100%;
   color: black;
-  height: 2.5em;
+  height: 1.2em;
   font-weight: 700;
   padding: 5px;
-  background-color: #d393eb;
+  background-color: #fff;
+  text-align: end;
+  color: #a334cc;
+  font-family: roboto;
+  font-size: 20px;
   
   
   `
+  const initialState = `
+  # Heading1
+  ## Heading2
+  - list item 1
+  - list item 2
+  - list item 3
+  
+  
+  [Visit GLUG Official website](https://nitdgplug.org/)
+
+  ### block of code
+  \`\`\`
+  let x= 1;
+  let y= 2;
+  \`\`\`
+  ***
+  *Welcome*
+  ![GLUG](https://img1.pnghut.com/t/25/23/10/AyxZpuifSG/penguin-ducks-geese-and-swans-linux-logical-volume-manager-flightless-bird.jpg)
+  
+  `;
+
 
   const md= new Remarkable ()
   function TextForm(props) {
     const{handleLogout}=props;
-    const [text, setText] = useState("");
+    const [text, setText] = useState(initialState);
     //const [inputText,setInputText]= useState({input:""});
     //const {input} = text;
     useEffect(()=>{
@@ -48,6 +75,7 @@
      {setText(JSON.parse(formData));}
     },[]);
     useEffect(() => {
+      
       localStorage.setItem("my-form-value1",JSON.stringify(text));
     });
   
@@ -190,10 +218,16 @@
         <>
         <div className='entity'>     
         
-        
-    <div className='header'>Markdown Editor <button className='button1'onClick={handleLogout}>Logout</button></div>   
-    <Info>{text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters</Info>
-      
+        {/* <Navbar/> */}
+    <div className='header'>
+      <div className='headertext'>Markdown </div>
+      <button className='button1'onClick={handleLogout}>Logout</button>
+      </div>   
+    <Info>
+      {text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters
+      {0.008*text.split(" ").filter((element)=>{return element.length!==0}).length} minutes read
+      </Info>
+
       {/* <div className='save'><button className="download"onClick={downloadFile}><DownloadRoundedIcon/></button>               
                 <input type="text" className="filename" placeholder='untitled'></input></div> */}
      <div className='main'>           

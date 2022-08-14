@@ -1,11 +1,12 @@
 //import firebase from 'firebase';
-//import {Getfirestore} from 'firebase/firestore';
-//import {GetStorage} from 'firebase/storage';
-//import "firebase/storage"
+//import {getDatabase} from 'firebase/database';
+//import {initializeApp} from 'firebase/app';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 //import {GoogleAuthProvider, signInWithPopup} from 'firebase/auth';
+
+
 var firebaseConfig = {
     apiKey: "AIzaSyAY7KjBfEL4x4hzQquraEGz5Ovy51dWy-0",
     authDomain: "texteditor-auth.firebaseapp.com",
@@ -18,8 +19,9 @@ var firebaseConfig = {
   };
   const fire = firebase.initializeApp(firebaseConfig);
   //const db = fire.firestore();
-  
-  export default fire;
+  //const db = getDatabase(fire);
+  export default fire ;
+  //export default {fire,db};
 
   // export const provider = new GoogleAuthProvider()
   // const signInWithGoogle =()=>{

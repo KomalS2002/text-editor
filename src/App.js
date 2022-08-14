@@ -6,11 +6,13 @@ import './App.css';
 import  React, {useState, useEffect} from 'react';
 import { Remarkable } from 'remarkable';
 import fire from './Components/fire';
+//import db from './Components/fire' ;
 import Login from './Components/login';
 import TextForm from './Components/TextForm';
 import styled from 'styled-components';
-import Navbar from './Components/Navbar';
-import NavLinks from './Components/NavLinks';
+
+//import Navbar from './Components/Navbar';
+//import NavLinks from './Components/NavLinks';
 //import { useHistory } from "react-router-dom";
 const Appcontainer= styled.div`
 height: 100%;
@@ -39,7 +41,7 @@ const clearErrors =()=>{
 }
 const handleLogin = ()=>{
   clearErrors();
-  fire
+ fire
  
   .auth()
   .signInWithEmailAndPassword(email,password)
