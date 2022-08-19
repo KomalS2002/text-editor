@@ -1,8 +1,11 @@
   import React from 'react'
   import  {useState,useEffect} from 'react';
   import { Remarkable } from 'remarkable';
-  import fire from './fire';
-  //import{uid} from 'uid';
+  import {db} from './fire';
+  import {collection, addDoc, getDocs, updateDoc ,doc} from 'firebase/firestore';
+  import { getDatabase, ref, set } from "firebase/database";
+  //import {getFirestore} from 'firebase/firestore';
+  
   // import {useHistory } from "react-router-dom";
   // import FormatBoldRoundedIcon from '@mui/icons-material/FormatBoldRounded';
   // import FormatItalicRoundedIcon from '@mui/icons-material/FormatItalicRounded';
@@ -37,8 +40,9 @@
   text-align: end;
   color: #a334cc;
   font-family: roboto;
-  font-size: 20px;
-  
+  font-size: 15px;
+  margin-top: 60px;
+  margin-bottom: 0px;
   
   `
   const initialState = `
@@ -66,7 +70,13 @@
   const md= new Remarkable ()
   function TextForm(props) {
     const{handleLogout}=props;
+    const docId = props;
     const [text, setText] = useState(initialState);
+    const [documents, setDocuments] = useState("");
+    const userCollectionRef = collection(db, "documents");
+    const handleTextChange = (e)=>{
+      setText(e.target.value)
+    }
     //const [inputText,setInputText]= useState({input:""});
     //const {input} = text;
     useEffect(()=>{
@@ -78,15 +88,65 @@
       
       localStorage.setItem("my-form-value1",JSON.stringify(text));
     });
-  
-
-
+    //attempt 1 CRUD
+    // const writeDatabase =()=>{
+    // const textRef = fire.database().ref("text");
+    // const form = {
+    //   text,
+    //   complete: false,
+    // };
+    // textRef.push(form);
+    // };
     
+    //attempt 2 for CRUD Success
+    // function saveToDb(user,  email) {
+    //   const db = getDatabase();
+    //   set(ref(db, 'users/' + user), {
+    //     text: text,
+    //     email: email,
+        
+    //   });
+    // }
+     useEffect(()=>{
+      const getText = async () => {
+        const data = await getDocs(userCollectionRef);
+         //console.log(data);
+        setDocuments(data.docs.map((doc)=>({...doc.data(), id:doc.id})));
+      };
+      getText();
+     }, []);
+   
+     const saveToDb = async ()=>{
+      await addDoc(userCollectionRef, {file:text});
+    }
+     const updateDocument = async (id)=>{
+      const userDoc = doc(db , "documents" , id)
+      const newFields= { value: text}
+      await updateDoc(userDoc, newFields)
+     };
+
     // const save = (e) => {
     //   e.preventdefault();
 
     //   db.collection("documents").doc()
     // }
+
+    //atempt3
+    // const saveToDb = (e)=>{
+    //   e.preventDefault();
+
+    //     if (docId) {
+    //         db.collection("documents").doc(docId).add({
+    //              text:text,
+    //             timestamp: db.firestore.FieldValue.serverTimestamp(),
+                
+                
+    //         });
+    //     }
+    //     setText("");
+    // }
+
+
 //    const [isBold, setIsBold] = useState(true);
 
 //   const handleBoldClick = ()=>{
@@ -216,12 +276,15 @@
     return (
       
         <>
-        <div className='entity'>     
-        
+        <div className='entity'>    
+       
         {/* <Navbar/> */}
     <div className='header'>
+      <div><img className='logo' src='./images/text-tool.png'/></div>
       <div className='headertext'>Markdown </div>
       <button className='button1'onClick={handleLogout}>Logout</button>
+      <button className='save' onClick={saveToDb}>Save </button>
+      <button className='update' onClick={()=>{updateDocument(doc.id)}}>Update</button>
       </div>   
     <Info>
       {text.split(" ").filter((element)=>{return element.length!==0}).length} words {text.length} characters
@@ -239,7 +302,7 @@
                id='markdown'  
                placeholder='Type some text here' 
                value={text} 
-               onChange={(e)=>setText(e.target.value)}
+               onChange={handleTextChange}
     ></textarea>
          </div>
         
